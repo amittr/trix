@@ -1,0 +1,8 @@
+[build]
+target = "aarch64-unknown-none"
+
+[target.aarch64-unknown-none]
+rustflags = [
+	"-C", "link-arg=-Tsrc/bsp/raspberrypi/link.ld",
+	"-C", "target-cpu=cortex-a53"
+]
